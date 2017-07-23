@@ -1,0 +1,17 @@
+.root-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    flex: 1 1 30%;
+    min-width: 200px;
+}
+
+.sidebar-toggle-wrapper {
+    display: none;
+}
+
+.router-outlet {
+    flex: 1 1 70%;
+}
