@@ -5,9 +5,19 @@
 
     .sidebar {
         display: none;
+
+        &.sidebar-showing {
+            display: inherit;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+        }
     }
 
     .sidebar-toggle-wrapper {
-        display: block;
+        display: flex;
+        width: 100%;
+        align-items: center;
     }
 }

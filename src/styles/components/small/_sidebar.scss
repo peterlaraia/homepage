@@ -1,0 +1,15 @@
+@media screen and (max-width: 700px) {
+    .sidebar {
+        .sidebar-toggle-wrapper {
+            flex: 1 1 10%;
+        }
+
+        .profile {
+            flex: 1 1 35%;
+        }
+
+        .menu {
+            flex: 1 1 55%;
+        }
+    }
+}

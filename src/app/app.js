@@ -24,11 +24,11 @@ export class App extends React.Component {
         const showSidebar = this.state.sidebar;
         return (
             <div className="root-container">
-                <div className='sidebar-toggle-wrapper'>
+                <div className='sidebar-toggle-wrapper flex-left'>
                     <SidebarToggle on={showSidebar} onTrigger={this.toggleSidebar} />
                 </div>
-                <Sidebar>
-                    <div className='sidebar-toggle-wrapper'>
+                <Sidebar show={showSidebar}>
+                    <div className='sidebar-toggle-wrapper flex-right'>
                         <SidebarToggle on={showSidebar} onTrigger={this.toggleSidebar} />
                     </div>
                 </Sidebar>
