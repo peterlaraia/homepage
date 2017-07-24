@@ -1,0 +1,17 @@
+.project {
+    min-height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        height: 1px;
+        width: 80%;
+        border-bottom: 1px solid grey;
+    }
+}

@@ -4,7 +4,7 @@ export class Home extends React.Component {
     
     render () {
         return (
-            <div className='home-component'>Home</div>
+            <div className='container vertical'>Home</div>
         );
     }
 }

@@ -1,3 +1,5 @@
+@import '../../partials/layout';
+
 @media screen and (max-width: 700px) {
     .root-container {
         flex-direction: column;
@@ -6,7 +8,7 @@
     .sidebar {
         position: fixed;
         top: 0;
-        left: -70%;
+        left: -$sidebar-minWidth;
         height: 100vh;
 
         transition: all 0.4s ease-in-out;
