@@ -1,10 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 
-import { Sidebar } from './sidebar/sidebar';
-import { SidebarToggle } from './sidebar/sidebar-toggle';
 import { Home } from './home/home';
 import { Projects } from './projects/projects';
+import { Sidebar } from './sidebar/sidebar';
+import { SidebarToggle } from './sidebar/sidebar-toggle';
+
+import './app.scss';
+import './app.small.scss';
 
 export class App extends React.Component {
 
@@ -27,7 +30,7 @@ export class App extends React.Component {
                 <div className='sidebar-toggle-wrapper flex-left'>
                     <SidebarToggle on={showSidebar} onTrigger={this.toggleSidebar} />
                 </div>
-                <Sidebar show={showSidebar}>
+                <Sidebar show={showSidebar} >
                     <div className='sidebar-toggle-wrapper flex-right'>
                         <SidebarToggle on={showSidebar} onTrigger={this.toggleSidebar} />
                     </div>

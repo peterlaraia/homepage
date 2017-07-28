@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import './menu.scss';
+
 export function Menu(props) {
     return (
         <nav className="menu">
