@@ -6,7 +6,7 @@
 }
 
 .sidebar {
-    flex: 1 1 30%;
+    flex: 1 0 30%;
     min-width: $sidebar-minWidth;
     max-width: $sidebar-maxWidth;
 }
@@ -16,5 +16,6 @@
 }
 
 .router-outlet {
-    flex: 1 1 70%;
+    flex: 1 1 auto;
+    overflow: auto;
 }

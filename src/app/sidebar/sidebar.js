@@ -10,11 +10,11 @@ import './sidebar.small.scss';
 
 export function Sidebar(props) {
     return (
-        <div className={classNames('sidebar', {'sidebar-showing': props.show})}>
-            {props.children}
-            <Profile />
-            <Menu />
-        </div>
+            <div className={classNames('sidebar', { 'sidebar-showing': props.show })}>
+                {props.children}
+                <Profile />
+                <Menu />
+            </div>
     );
 }
 
