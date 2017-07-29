@@ -1,6 +1,9 @@
 import React from 'react';
 
+import { Project } from './project';
 import { ContentService } from '../services/content.service';
+
+import './projects.scss';
 
 export class Projects extends React.Component {
 
@@ -15,12 +18,12 @@ export class Projects extends React.Component {
     }
 
     render() {
-        const projects = this.state.projects;
+        const {projects} = this.state;
         return (
             <div className='container vertical'>
                 {
                     projects.map(project => (
-                        <div className='section project' key={project.id}>{project.name}</div>
+                        <Project key={project.id} project={project} />
                     ))
                 }
             </div>
