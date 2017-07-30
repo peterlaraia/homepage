@@ -9,7 +9,6 @@
             "github": "https://github.com/PeterLaraia/CouchGuide"
         },
         "technologies": [
-            "Angular2+",
             "Typescript/Javascript",
             "Jasmine/Karma",
             "Ngrx (Redux)"

@@ -10,14 +10,6 @@
     .project-header {
         flex: 0 0 24px;
         display: flex;
-        a {
-            color: inherit;
-            transition: font-size linear 0.1s;
-
-            &:hover {
-                font-size: 19px;
-            }
-        }
     }
 
     .project-content {
