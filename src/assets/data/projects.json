@@ -3,7 +3,7 @@
         "id": 1,
         "name": "CouchGuide",
         "summary": "Angular2+ webapp that provides users with information for their favorite TV Shows (summary information, upcoming episodes, schedule, which network it airs on, etc.)",
-        "thumbnail": "",
+        "thumbnail": "assets/img/couchguide.png",
         "link": {
             "main": "https://www.couchguide.me",
             "github": "https://github.com/PeterLaraia/CouchGuide"
@@ -18,7 +18,7 @@
         "id": 2,
         "name": "Pevil Libraries",
         "summary": "Angular2+ UI/helper libraries published on npm, providing reusable components to use across multiple applications. Includes libraries like UI tabs and datepicker",
-        "thumbnail": "",
+        "thumbnail": "assets/img/pevil.svg",
         "link": {
             "main": "https://www.npmjs.com/~peterlaraia",
             "github": "https://github.com/Pevil"

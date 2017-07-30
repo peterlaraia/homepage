@@ -40,7 +40,8 @@ module.exports = {
       hash: true
     }),
     new CopyWebpackPlugin([
-      { from: 'src/assets/**/*.json', to: 'assets', flatten: true }
+      { from: 'src/assets/**/*.json', to: 'assets', flatten: true },
+      { from: {glob: 'src/assets/**/*.{png,svg}'}, to: 'assets/img', flatten: true}
     ]),
     new ExtractTextPlugin({
       filename: 'main.css',

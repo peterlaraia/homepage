@@ -4,21 +4,34 @@ import './project.scss';
 
 export function Project(props) {
     const { project } = props;
+    const navigateTo = (url) => {
+        window.location = url;
+    }
     return (
-        <a className='clean-link pulse' href={project.link.main}>
-            <div className='project-section'>
-                <div className='project-header flex-center pulse-font'>
-                    <h4>{project.name}</h4>
+        <div className='project-section pulse' onClick={() => navigateTo(project.link.main)}>
+            <div className='project-header flex-center pulse-font'>
+                <h4>{project.name}</h4>
+            </div>
+            <div className='project-content'>
+                <div className='project-thumbnail flex-center'>
+                    <img src={project.thumbnail} />
                 </div>
-                <div className='project-content'>
-                    <div className='project-notes flex-center'>
-                        NOTES
-                    </div>
+                <div className='project-notes'>
                     <div className='project-description flex-center'>
                         {project.summary}
                     </div>
+                    <div className='project-technologies flex-center font-small'>
+                        {
+                            project.technologies.map(tech => (
+                                <div key={tech} className='project-tech flex-center'>{tech}</div>
+                            ))
+                        }
+                    </div>
+                    <div className='project-git flex-center font-tiny'>
+                        <a href={project.link.github}>{project.link.github}</a>
+                    </div>
                 </div>
             </div>
-        </a>
+        </div>
     );
 }
