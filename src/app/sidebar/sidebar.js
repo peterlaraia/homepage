@@ -12,7 +12,7 @@ export function Sidebar(props) {
     return (
             <div className={classNames('sidebar', { 'sidebar-showing': props.show })}>
                 {props.children}
-                <Profile />
+                <Profile name={'Peter Laraia'} />
                 <Menu />
             </div>
     );
