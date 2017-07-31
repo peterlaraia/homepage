@@ -28,7 +28,7 @@ export class Projects extends React.Component {
             <div className='container vertical'>
                 {
                     projects.map(project => (
-                        <Section key={project.id} title={project.name} onClick={() => this.navigateTo(project.link.main)} pulse>
+                        <Section key={project.id} title={project.name} onTitleClick={() => this.navigateTo(project.link.main)} pulse>
                             <Project project={project} />
                         </Section>
                     ))
