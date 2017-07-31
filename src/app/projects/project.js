@@ -27,9 +27,6 @@ export function Project(props) {
                             ))
                         }
                     </div>
-                    <div className='project-git flex-center font-tiny'>
-                        <a href={project.link.github}>{project.link.github}</a>
-                    </div>
                 </div>
             </div>
         </div>
