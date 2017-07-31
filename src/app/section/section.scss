@@ -1,0 +1,29 @@
+.section {
+    min-height: 250px;
+    position: relative;
+    display: flex;
+    margin-top: 24px;
+    margin-left: 12px;
+    margin-right: 12px;
+    flex-direction: column;
+
+    .section-header {
+        flex: 0 0 24px;
+        display: flex;
+    }
+
+    .section-content {
+        flex: 1 1 auto;
+        display: flex;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        height: 1px;
+        width: 80%;
+        border-bottom: 1px solid grey;
+    }
+}
