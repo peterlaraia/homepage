@@ -12,7 +12,7 @@
         left: -$sidebar-minWidth;
         height: 100vh;
 
-        transition: all 0.4s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &.sidebar-showing {
             left: 0;
@@ -20,7 +20,7 @@
     }
 
     .sidebar-toggle-wrapper {
-        flex: 1 1 64px;
+        flex: 0 0 48px;
         display: flex;
         width: 100%;
         align-items: center;

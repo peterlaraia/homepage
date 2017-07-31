@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Bubble } from '../bubble/bubble';
+
 import './project.scss';
 
 export function Project(props) {
@@ -17,7 +19,7 @@ export function Project(props) {
                 <div className='project-technologies flex-center font-small'>
                     {
                         project.technologies.map(tech => (
-                            <div key={tech} className='project-tech flex-center'>{tech}</div>
+                            <Bubble key={tech} value={tech} />
                         ))
                     }
                 </div>
