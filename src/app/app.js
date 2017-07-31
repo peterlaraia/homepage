@@ -1,30 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom'
 
 import { Home } from './home/home';
 import { Projects } from './projects/projects';
 import { Sidebar } from './sidebar/sidebar';
 import { SidebarToggle } from './sidebar/sidebar-toggle';
+import * as actions from './sidebar/store/actions';
 
 import './app.scss';
 import './app.small.scss';
 
+@connect((state) => ({
+    showSidebar: state.sidebar.show
+}))
 export class App extends React.Component {
 
-    state = {
-        sidebar: false
-    }
-
-    constructor(props) {
-        super(props);
-    }
-
     toggleSidebar = () => {
-        this.setState((state) => ({ ...state, sidebar: !state.sidebar }));
+        this.props.dispatch(actions.toggle())
     }
 
     render() {
-        const showSidebar = this.state.sidebar;
+        const {showSidebar} = this.props;
         return (
             <div className="root-container">
                 <div className='sidebar-toggle-wrapper flex-left'>
