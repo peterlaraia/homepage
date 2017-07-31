@@ -12,7 +12,7 @@
         left: -$sidebar-minWidth;
         height: 100vh;
 
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease;
 
         &.sidebar-showing {
             left: 0;

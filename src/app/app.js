@@ -2,6 +2,9 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 
 import { Home } from './home/home';
+import { Menu } from './menu/menu';
+import { MenuItem } from './menu/menu-item';
+import { Profile } from './profile/profile';
 import { Projects } from './projects/projects';
 import { Sidebar } from './sidebar/sidebar';
 import { SidebarToggle } from './sidebar/sidebar-toggle';
@@ -20,7 +23,11 @@ export class App extends React.Component {
     }
 
     toggleSidebar = () => {
-        this.setState((state) => ({ ...state, sidebar: !state.sidebar }));
+        this.setSidebar(!this.state.sidebar);
+    }
+
+    setSidebar = (show) => {
+        this.setState((state) => ({ ...state, sidebar: show}));
     }
 
     render() {
@@ -34,6 +41,12 @@ export class App extends React.Component {
                     <div className='sidebar-toggle-wrapper flex-right'>
                         <SidebarToggle on={showSidebar} onTrigger={this.toggleSidebar} />
                     </div>
+                    <Profile name='Peter Laraia' />
+                    <Menu>
+                        <MenuItem exact to='/' onClick={this.setSidebar.bind(this, false)}>Home</MenuItem>
+                        <MenuItem to='/projects' onClick={this.setSidebar.bind(this, false)}>Projects</MenuItem>
+                        <MenuItem to='/resume' onClick={this.setSidebar.bind(this, false)}>Resume</MenuItem>
+                    </Menu>
                 </Sidebar>
                 <div className="router-outlet">
                     <Switch>
