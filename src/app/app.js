@@ -27,6 +27,7 @@ export class App extends React.Component {
     }
 
     setSidebar = (show) => {
+        console.log('toggling', show);
         this.setState((state) => ({ ...state, sidebar: show}));
     }
 
@@ -35,17 +36,17 @@ export class App extends React.Component {
         return (
             <div className="root-container">
                 <div className='sidebar-toggle-wrapper flex-left'>
-                    <SidebarToggle on={showSidebar} onTrigger={this.toggleSidebar} />
+                    <SidebarToggle active={showSidebar} onTrigger={this.toggleSidebar} ref='topSidebarTrigger' />
                 </div>
-                <Sidebar show={showSidebar} >
+                <Sidebar showing={showSidebar} externalTriggers={[this.refs.topSidebarTrigger]} onClickOutside={() => this.setSidebar(false)}>
                     <div className='sidebar-toggle-wrapper flex-right'>
-                        <SidebarToggle on={showSidebar} onTrigger={this.toggleSidebar} />
+                        <SidebarToggle active={showSidebar} onTrigger={this.toggleSidebar} />
                     </div>
                     <Profile name='Peter Laraia' />
                     <Menu>
-                        <MenuItem exact to='/' onClick={this.setSidebar.bind(this, false)}>Home</MenuItem>
-                        <MenuItem to='/projects' onClick={this.setSidebar.bind(this, false)}>Projects</MenuItem>
-                        <MenuItem to='/resume' onClick={this.setSidebar.bind(this, false)}>Resume</MenuItem>
+                        <MenuItem exact to='/' onClick={() => this.setSidebar(false)}>Home</MenuItem>
+                        <MenuItem to='/projects' onClick={() => this.setSidebar(false)}>Projects</MenuItem>
+                        <MenuItem to='/resume' onClick={() => this.setSidebar(false)}>Resume</MenuItem>
                     </Menu>
                 </Sidebar>
                 <div className="router-outlet">

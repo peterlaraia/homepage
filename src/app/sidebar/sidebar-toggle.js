@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function SidebarToggle(props) {
-    const active = props.on;
-    const trigger = props.onTrigger;
-    return (
-        <div className='sidebar-toggle' onClick={trigger}>{active ? 'X' : 'O'}</div>
-    );
+export class SidebarToggle extends React.Component {
+    render() {
+        const { active, onTrigger } = this.props;
+        return (
+            <div className='sidebar-toggle' style={{ cursor: 'pointer' }} onClick={onTrigger}>{active ? 'X' : 'O'}</div>
+        );
+    }
 }
 
 SidebarToggle.propTypes = {
