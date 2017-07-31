@@ -1,22 +1,5 @@
-.project-section {
-    min-height: 250px;
-    position: relative;
+.project {
     display: flex;
-    margin-top: 24px;
-    margin-left: 12px;
-    margin-right: 12px;
-    flex-direction: column;
-    cursor: pointer;
-
-    .project-header {
-        flex: 0 0 24px;
-        display: flex;
-    }
-
-    .project-content {
-        flex: 1 1 auto;
-        display: flex;
-    }
 
     .project-thumbnail {
         flex: 1 1 25%;
@@ -54,20 +37,5 @@
                 padding-right: 8px;
             }
         }
-
-        .project-git {
-            flex: 0 0 36px;
-        }
-
-    }
-
-    &:before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 10%;
-        height: 1px;
-        width: 80%;
-        border-bottom: 1px solid grey;
     }
 }
