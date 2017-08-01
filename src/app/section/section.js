@@ -21,9 +21,9 @@ export function Section(props) {
     return (
         <div className={sectionClass} style={sectionStyle} onClick={onClick}>
             <div className={headerClass} >
-                <h4 onClick={onTitleClick} style={titleStyle}>{title}</h4>
+                <h3 onClick={onTitleClick} style={titleStyle}>{title}</h3>
             </div>
-            <div className='section-content'>
+            <div className='section-content' style={{marginTop: '24px'}}>
                 {props.children}
             </div>
         </div>

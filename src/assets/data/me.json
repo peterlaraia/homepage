@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "description": "Webdev",
+        "img": "angular.svg"
+    },
+    {
+        "id": 2,
+        "description": "Soccer",
+        "img": "soccer.png"
+    },
+    {
+        "id": 3,
+        "description": "Overwatch",
+        "img": "overwatch.png"
+    },
+    {
+        "id": 4,
+        "description": "Guild Wars 2",
+        "img": "gw2.png"
+    },
+    {
+        "id": 5,
+        "img": "taiwan.svg"
+    },
+    {
+        "id": 6,
+        "img": "usa.svg"
+    },
+    {
+        "id": 7,
+        "img": "germany.svg"
+    }
+]
