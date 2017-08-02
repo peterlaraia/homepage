@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Scatter } from './scatter';
-import { ContentService } from '../services/content.service';
+import { ContentService } from '../../services/content.service';
 
 import './home.scss';
 

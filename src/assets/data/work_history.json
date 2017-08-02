@@ -1,0 +1,44 @@
+[
+    {
+        "company": "Thomson Reuters (Findlaw)",
+        "title": "Software Engineer",
+        "location": {
+            "city": "Eagan",
+            "state": "MN"
+        },
+        "startDate": "May 2016",
+        "achievements": [
+            "Developer on an agile team building new webapps for lawfirms which streamline the lead intake process. Involves multiple Angular frontend apps + a collection of Java Spring microservices in the backend. Other technologies: Typescript, Gradle/Maven, Node, REST",
+            "Spearheaded initiative to modularize & privately publish reusable Angular components & directives to make maintaining shared UI code between applications significantly more manageable across the Findlaw organization"
+        ]
+    },
+    {
+        "company": "Maverick Software Consulting (Thomson Reuters)",
+        "title": "Software Engineer/Consultant",
+        "location": {
+            "city": "Madison",
+            "state": "WI"
+        },
+        "startDate": "May 2015",
+        "endDate": "May 2016",
+        "achievements": [
+            "Primarily software & UI testing (JUnit, Selenium) for PDF to XML conversion pipeline (adding case files to Westlaw directory)",
+            "Optimized portion of existing regression code base to run up to 20% faster by implementing a simple cache mechanism",
+            "Automated manual testing tasks to find bugs in seconds instead of hours"
+        ]
+    },
+    {
+        "company": "Der Rote Faden",
+        "title": "Intern",
+        "location": {
+            "city": "Aachen",
+            "country": "Germany"
+        },
+        "startDate": "June 2013",
+        "endDate": "August 2013",
+        "achievements": [
+            "Local retail/wholesale shop, served customers over the phone & in person by taking orders, answering questions, and resolving issues. Prepared and shipped customer orders, recorded and processed incoming shipments, and handling accounting task",
+            "Automated data entry tasks for new seasonal products that previously were being done by hand: from excel sheet into MySQL database via Python script"
+        ]
+    }
+]

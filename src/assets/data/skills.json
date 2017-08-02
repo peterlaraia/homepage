@@ -1,0 +1,27 @@
+{
+    "tech": {
+        "experienced": [
+            "Angular (2+)",
+            "Ngrx/Redux",
+            "Java (Spring)",
+            "Typescript",
+            "Linux/Windows",
+            "Jasmine"
+        ],
+        "intermediate": [
+            "React",
+            "Javascript",
+            "Webpack",
+            "SQL",
+            "Python"
+        ]
+    },
+    "languages": {
+        "experienced": [
+            "German", "English"
+        ],
+        "intermediate": [
+            "Mandarin"
+        ]
+    }
+}

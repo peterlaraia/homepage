@@ -19,7 +19,7 @@ export function Project(props) {
                 <div className='project-technologies flex-center font-small'>
                     {
                         project.technologies.map(tech => (
-                            <Bubble key={tech} value={tech} />
+                            <div className='flex-center project-technology' key={tech}>{tech}</div>
                         ))
                     }
                 </div>

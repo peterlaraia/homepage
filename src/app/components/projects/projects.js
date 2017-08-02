@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Project } from './project';
 import { Section } from '../section/section';
-import { ContentService } from '../services/content.service';
+import { ContentService } from '../../services/content.service';
 
 import './projects.scss';
 

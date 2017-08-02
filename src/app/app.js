@@ -1,13 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 
-import { Home } from './home/home';
-import { Menu } from './menu/menu';
-import { MenuItem } from './menu/menu-item';
-import { Profile } from './profile/profile';
-import { Projects } from './projects/projects';
-import { Sidebar } from './sidebar/sidebar';
-import { SidebarToggle } from './sidebar/sidebar-toggle';
+import { Home } from './components/home/home';
+import { Menu } from './components/menu/menu';
+import { MenuItem } from './components/menu/menu-item';
+import { Profile } from './components/profile/profile';
+import { Projects } from './components/projects/projects';
+import { Sidebar } from './components/sidebar/sidebar';
+import { SidebarToggle } from './components/sidebar/sidebar-toggle';
 
 import './app.scss';
 import './app.large.scss';
