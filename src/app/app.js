@@ -10,6 +10,7 @@ import { Sidebar } from './sidebar/sidebar';
 import { SidebarToggle } from './sidebar/sidebar-toggle';
 
 import './app.scss';
+import './app.large.scss';
 import './app.small.scss';
 
 export class App extends React.Component {
@@ -27,7 +28,6 @@ export class App extends React.Component {
     }
 
     setSidebar = (show) => {
-        console.log('toggling', show);
         this.setState((state) => ({ ...state, sidebar: show}));
     }
 

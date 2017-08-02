@@ -5,8 +5,8 @@ import './profile.scss';
 export function Profile(props) {
     const {name} = props;
     return (
-        <div className='profile flex-center'>
-            <img className='avatar' alt='Image unavailable' />
+        <div className='profile'>
+            <img className='avatar' alt='Image unavailable' src='assets/img/peterlaraia.jpg'/>
             <div>{name}</div>
         </div>
     );

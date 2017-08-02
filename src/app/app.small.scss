@@ -9,10 +9,10 @@
         flex: none;
         position: fixed;
         top: 0;
-        left: -$sidebar-minWidth;
+        left: -$sidebar-maxWidth;
         height: 100vh;
 
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
 
         &.sidebar-showing {
             left: 0;
