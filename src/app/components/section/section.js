@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import './section.scss';
 
 export function Section(props) {
-    const { title, children, onClick, pulse, onTitleClick } = props;
+    const { title, children, onClick, pulse, onTitleClick, minHeight } = props;
     const sectionClass = classNames('section', {
         pulse: pulse
     });
@@ -13,7 +13,8 @@ export function Section(props) {
         'pulse-font': pulse
     });
     const sectionStyle = {
-        cursor: onClick ? 'pointer' : 'inherit'
+        cursor: onClick ? 'pointer' : 'inherit',
+        minHeight: minHeight
     };
     const titleStyle = {
         cursor: onTitleClick ? 'pointer' : 'inherit'

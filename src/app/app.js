@@ -8,6 +8,7 @@ import { Profile } from './components/profile/profile';
 import { Projects } from './components/projects/projects';
 import { Sidebar } from './components/sidebar/sidebar';
 import { SidebarToggle } from './components/sidebar/sidebar-toggle';
+import { Resume } from './components/resume/resume';
 
 import './app.scss';
 import './app.large.scss';
@@ -53,6 +54,7 @@ export class App extends React.Component {
                     <Switch>
                         <Route exact path='/' component={Home} />
                         <Route exact path='/projects' component={Projects} />
+                        <Route exact path='/resume' component={Resume} />
                     </Switch>
                 </div>
             </div>
