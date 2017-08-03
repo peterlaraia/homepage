@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import './section.scss';
 
 export function Section(props) {
-    const { title, children, onClick, pulse, onTitleClick, minHeight } = props;
+    const { title, children, onClick, pulse, onTitleClick } = props;
     const sectionClass = classNames('section', {
         pulse: pulse
     });
@@ -14,17 +14,21 @@ export function Section(props) {
     });
     const sectionStyle = {
         cursor: onClick ? 'pointer' : 'inherit',
-        minHeight: minHeight
+        ...props.style
     };
     const titleStyle = {
         cursor: onTitleClick ? 'pointer' : 'inherit'
+    }
+    const contentStyle = {
+        marginTop: '24px',
+        ...props.contentStyle
     }
     return (
         <div className={sectionClass} style={sectionStyle} onClick={onClick}>
             <div className={headerClass} >
                 <h3 onClick={onTitleClick} style={titleStyle}>{title}</h3>
             </div>
-            <div className='section-content' style={{marginTop: '24px'}}>
+            <div className='section-content' style={contentStyle}>
                 {props.children}
             </div>
         </div>

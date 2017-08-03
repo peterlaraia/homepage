@@ -16,12 +16,18 @@
             "Python"
         ]
     },
-    "languages": {
-        "experienced": [
-            "German", "English"
-        ],
-        "intermediate": [
-            "Mandarin"
-        ]
-    }
+    "languages": [
+        {
+            "language": "German",
+            "experience": "Fluent"
+        },
+        {
+            "language": "English",
+            "experience": "Fluent"
+        },
+        {
+            "language": "Mandarin",
+            "experience": "Proficient"
+        }
+    ]
 }

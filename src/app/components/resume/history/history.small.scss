@@ -1,0 +1,16 @@
+@media screen and (max-width: 700px) {
+    .history-wrapper {
+        .section-content {
+            h5.job-title {
+                display: flex;
+                margin-top: -18px;
+            }
+
+            .job-banner {
+                .job-title {
+                    display: none;
+                }
+            }
+        }
+    }
+}

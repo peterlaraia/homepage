@@ -2,8 +2,11 @@ import React from 'react';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
 
+import { JobHistory } from './history/history';
+import { Languages } from './languages/languages';
 import { Section } from '../section/section';
 import { ContentService } from '../../services/content.service';
+import { Skills } from './skills/skills';
 
 import './resume.scss';
 
@@ -15,10 +18,7 @@ export class Resume extends React.Component {
             experienced: [],
             intermediate: []
         },
-        languages: {
-            experienced: [],
-            intermediate: []
-        }
+        languages: []
     }
 
     componentDidMount() {
@@ -36,19 +36,15 @@ export class Resume extends React.Component {
     }
 
     render() {
-        const {history, skills, languages} = this.state;
+        const { history, skills, languages } = this.state;
         return (
             <div className='container vertical resume'>
-                <div className='container vertical'>
-                    <h2 className='flex-center'>WicHser</h2>
-                    {
-                        history.map(hist => (
-                            <Section key={hist.startDate + '-' + hist.company} title={hist.company}>
-                                <div>{hist.achievements}</div>
-                            </Section>
-                        ))
-                    }
-                </div>
+                <JobHistory history={history} />
+
+                <h2 className='flex-center'>Languages &amp; Skills</h2>
+                 <Skills skills={skills} /> 
+
+                <Languages languages={languages} />
             </div>
         );
     }
