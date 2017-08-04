@@ -60,6 +60,7 @@ export class App extends React.Component {
                         <Route exact path='/contact' component={Contacts} />
                     </Switch>
                 </div>
+                <div className={'sidebar-backdrop ' + (showSidebar && 'sidebar-backdrop-showing')}></div>
             </div>
         );
     }
