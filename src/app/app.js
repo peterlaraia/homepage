@@ -37,7 +37,7 @@ export class App extends React.Component {
         const showSidebar = this.state.sidebar;
         return (
             <div className="root-container">
-                <div className='sidebar-toggle-wrapper flex-left'>
+                <div className='sidebar-toggle-wrapper flex-left top-nav'>
                     <SidebarToggle active={showSidebar} onTrigger={this.toggleSidebar} ref='topSidebarTrigger' />
                 </div>
                 <Sidebar showing={showSidebar} externalTriggers={[this.refs.topSidebarTrigger]} onClickOutside={() => this.setSidebar(false)}>

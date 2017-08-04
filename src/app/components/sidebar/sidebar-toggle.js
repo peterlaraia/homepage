@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+import './sidebar-toggle.scss';
 
 export class SidebarToggle extends React.Component {
     render() {
         const { active, onTrigger } = this.props;
+        const className = classNames('sidebar-toggle flex-center', {
+            'sidebar-toggle-active': active
+        })
         return (
-            <div className='sidebar-toggle' style={{ cursor: 'pointer' }} onClick={onTrigger}>{active ? 'X' : 'O'}</div>
+            <div className={className} style={{ cursor: 'pointer' }} onClick={onTrigger}></div>
         );
     }
 }

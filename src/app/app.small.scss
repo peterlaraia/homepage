@@ -1,4 +1,5 @@
 @import '../styles/partials/layout';
+@import '../styles/partials/palette';
 
 @media screen and (max-width: 700px) {
     .root-container {
@@ -24,6 +25,10 @@
         display: flex;
         width: 100%;
         align-items: center;
+    }
+
+    .top-nav {
+        background-color: $color-gloomy;
     }
 
 }
