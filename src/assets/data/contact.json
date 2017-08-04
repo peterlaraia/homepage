@@ -1,11 +1,17 @@
-{
-    "linkedIn": {
-        "url": "https://linkedin.com/in/peterlaraia"
+[
+    {
+        "name": "linkedIn",
+        "url": "https://linkedin.com/in/peterlaraia",
+        "glyphClass": "socicon-linkedin"
     },
-    "github": {
-        "url": "https://github.com/peterlaraia"
+    {
+        "name": "github",
+        "url": "https://github.com/peterlaraia",
+        "glyphClass": "socicon-github"
     },
-    "email": {
-        "url": "pvlaraia@gmail.com"
+    {
+        "name": "email",
+        "url": "mailto:pvlaraia@gmail.com",
+        "glyphClass": "socicon-mail"
     }
-}
+]

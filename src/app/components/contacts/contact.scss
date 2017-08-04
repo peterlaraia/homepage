@@ -1,0 +1,9 @@
+.social-icon {
+    transition: all linear 0.2s;
+    flex: 1 1 auto;
+
+    &:hover {
+        color: rgba(0, 0, 0, 1);
+        font-size: 110%;
+    }
+}

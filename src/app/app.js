@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 
+import { Contacts } from './components/contacts/contacts';
 import { Home } from './components/home/home';
 import { Menu } from './components/menu/menu';
 import { MenuItem } from './components/menu/menu-item';
@@ -48,6 +49,7 @@ export class App extends React.Component {
                         <MenuItem exact to='/' onClick={() => this.setSidebar(false)}>Home</MenuItem>
                         <MenuItem to='/projects' onClick={() => this.setSidebar(false)}>Projects</MenuItem>
                         <MenuItem to='/resume' onClick={() => this.setSidebar(false)}>Resume</MenuItem>
+                        <MenuItem to='/contact' onClick={() => this.setSidebar(false)}>Contact</MenuItem>
                     </Menu>
                 </Sidebar>
                 <div className="router-outlet">
@@ -55,6 +57,7 @@ export class App extends React.Component {
                         <Route exact path='/' component={Home} />
                         <Route exact path='/projects' component={Projects} />
                         <Route exact path='/resume' component={Resume} />
+                        <Route exact path='/contact' component={Contacts} />
                     </Switch>
                 </div>
             </div>
