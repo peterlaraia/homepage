@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Contact } from './contact';
+import { Loading } from '../loading/loading';
 import { ContentService } from '../../services/content.service';
 
 import './contacts.scss';
@@ -9,25 +10,33 @@ import './contacts.small.scss';
 export class Contacts extends React.Component {
 
     state = {
-        contacts: []
+        contacts: [],
+        loading: false
     }
 
     componentDidMount() {
+        this.setState(state => ({
+            ...state, loading: true
+        }));
+
         ContentService.getContactInfo().subscribe(contacts => {
             this.setState((state) => ({
-                ...state, contacts: contacts
-            }))
-        })
+                ...state, contacts: contacts, loading: false
+            }));
+        });
     }
 
     render() {
-        const {contacts} = this.state;
+        const { contacts, loading } = this.state;
         return (
             <div className='contacts-wrapper'>
                 {
-                    contacts.map(contact => (
-                        <Contact key={contact.name} {...contact} />
-                    ))
+                    loading ?
+                        <Loading /> :
+                        contacts.map(contact => (
+                            <Contact key={contact.name} {...contact} />
+                        ))
+
                 }
             </div>
         );

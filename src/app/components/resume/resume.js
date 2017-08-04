@@ -4,6 +4,7 @@ import 'rxjs/add/observable/forkJoin';
 
 import { JobHistory } from './history/history';
 import { Languages } from './languages/languages';
+import { Loading } from '../loading/loading';
 import { Section } from '../section/section';
 import { ContentService } from '../../services/content.service';
 import { Skills } from './skills/skills';
@@ -18,10 +19,15 @@ export class Resume extends React.Component {
             experienced: [],
             intermediate: []
         },
-        languages: []
+        languages: [],
+        loading: false
     }
 
     componentDidMount() {
+        this.setState(state => ({
+            ...state, loading: true
+        }));
+
         Observable.forkJoin(
             ContentService.getWorkHistory(),
             ContentService.getSkills()
@@ -30,21 +36,28 @@ export class Resume extends React.Component {
                 ...state,
                 history: history,
                 skills: skills.tech,
-                languages: skills.languages
+                languages: skills.languages,
+                loading: false
             }));
         });
     }
 
     render() {
-        const { history, skills, languages } = this.state;
+        const { history, skills, languages, loading } = this.state;
         return (
-            <div className='container vertical resume'>
-                <JobHistory history={history} />
+            <div style={{ height: '100%' }}>
+                {
+                    loading ?
+                        <Loading /> :
+                        <div className='container vertical resume'>
+                            <JobHistory history={history} />
 
-                <h2 className='flex-center'>Languages &amp; Skills</h2>
-                 <Skills skills={skills} /> 
+                            <h2 className='flex-center'>Languages &amp; Skills</h2>
+                            <Skills skills={skills} />
 
-                <Languages languages={languages} />
+                            <Languages languages={languages} />
+                        </div>
+                }
             </div>
         );
     }

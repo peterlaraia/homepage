@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './contact.scss';
+import './contact.small.scss';
 
 export function Contact(props) {
     const { name, url, glyphClass } = props;
