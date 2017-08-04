@@ -1,7 +1,50 @@
-.loading-indicator {
+@keyframes loading {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 25px 0 -20px;
+    }
+
+    40% {
+        box-shadow: 0 25px 0 0;
+    }
+}
+
+.loading-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 
     height: 100%;
+}
+
+.loading-indicator,
+.loading-indicator:before,
+.loading-indicator:after {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation-fill-mode: both;
+    animation: loading 1.8s infinite ease-in-out;
+}
+
+.loading-indicator {
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+    }
+
+    &:before {
+        left: -56px;
+        animation-delay: -0.32s;
+    }
+
+    &:after {
+        left: 56px;
+    }
 }
