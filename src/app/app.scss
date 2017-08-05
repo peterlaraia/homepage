@@ -33,6 +33,27 @@
     overflow: auto;
 }
 
+/*App specific*/
+
 .loading-indicator {
     color: $red-dark;
 }
+
+.socicon-linkedin {
+    color: $color-albino;
+    background-color: #827be9;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #6059c7;
+    }
+}
+
+.socicon-mail {
+    color: $red;
+
+    &:hover {
+        color: $red-dark;
+    }
+}
+
