@@ -10,7 +10,7 @@ export function Project(props) {
     return (
         <div className='project'>
             <div className='project-thumbnail flex-center'>
-                <img src={project.thumbnail} />
+                <a href={project.link.main}><img src={project.thumbnail} /></a>
             </div>
             <div className='project-notes'>
                 <div className='project-description flex-center'>
