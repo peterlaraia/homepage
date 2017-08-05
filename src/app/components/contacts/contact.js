@@ -7,9 +7,10 @@ import './contact.small.scss';
 
 export function Contact(props) {
     const { name, url, glyphClass } = props;
-    const className = classNames('social-icon clean-link flex-center', glyphClass)
+    const className = classNames('social-icon flex-center', glyphClass)
     return (
-        <a href={url} className={className} title={name}>      
+        <a href={url} className='clean-link' title={name}>
+            <div className={className}></div>
         </a>
     );
 }

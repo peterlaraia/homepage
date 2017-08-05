@@ -2,7 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-require('./index.scss');
+import './index.scss';
+import './index.css';
 
 import { App } from './app/app';
 
