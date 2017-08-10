@@ -6,10 +6,14 @@ import { SkillSet } from './skillset';
 
 import './skills.scss';
 
+const sectionStyle = {
+    marginTop: '0'
+};
+
 export function Skills(props) {
     const { skills } = props;
     return (
-        <Section title='Technical Skills' contentStyle={{marginTop: '0'}} style={{marginTop: '0'}}>
+        <Section title='Technical Skills' style={sectionStyle}>
             <SkillSet skills={skills.experienced} title='Day-to-Day' className='skillset-experienced' />
             <SkillSet skills={skills.intermediate} title='Hobbyist' className='skillset-experienced' />
         </Section>

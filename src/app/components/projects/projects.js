@@ -42,7 +42,8 @@ export class Projects extends React.Component {
                                         title={project.name}
                                         onTitleClick={() => this.navigateTo(project.link.main)}
                                         pulse
-                                        style={{ minHeight: '250px' }}>
+                                        style={{ minHeight: '250px' }}
+                                        contentStyle={{marginTop: '12px'}}>
                                         <Project project={project} />
                                     </Section>
                                 ))

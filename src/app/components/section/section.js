@@ -20,7 +20,6 @@ export function Section(props) {
         cursor: onTitleClick ? 'pointer' : 'inherit'
     }
     const contentStyle = {
-        marginTop: '24px',
         ...props.contentStyle
     }
     return (
