@@ -4,11 +4,46 @@
         "I graduated from the University of Wisconsin - Madison in 2016, majoring in Computer Science. I love learning & playing with new technologies, and find myself particulary drawn to the rapidly evolving space of front-end development. I also enjoy tinkering with raspberry pis: I have a few laying around the house currently, one acting as a vpn to the home network, another as a home media center, and one that I haven't decided what to do with yet (ideas welcome ☺)"
     ],
     "hobbies": [
-        "I enjoy playing & watching soccer (S.C. Freiburg fan)",
-        "I play video games (recently Overwatch & Horizon: Zero Dawn)",
-        "My favorite tv shows are Game of Thrones, Daredevil, The Flash, Brooklyn Nine Nine, Friends (The list goes on & on)",
-        "I love skiing and have been a PSIA certified ski instructor for over 4 years"
+        {
+            "images": [
+                "usa.svg",
+                "germany.svg"
+            ],
+            "caption": "My mother immigrated to the United States from Germany during her college years. I am a dual citizen, and speak both German and English fluently"
+        },
+        {
+            "images": [
+                "angular.svg"
+            ],
+            "caption": "Even though this site is built on React, Angular is my bread & butter framework"
+        },
+        {
+            "images": [
+                "soccer.png",
+                "sc_freiburg.png"
+            ],
+            "caption": "I love playing & watching soccer (S.C. Freiburg fan)"
+        },
+        {
+            "images": [
+                "overwatch.png"
+            ],
+            "caption": "I find video games are a great way to unwind on the weekends"
+        },
+        {
+            "images": [
+                "taiwan.svg"
+            ],
+            "caption": "I lived and attended high school in Taipei, TW. Of all the places I consider home, Taipei is my favorite."
+        },
+        {
+            "images": [
+                "green_bay.png"
+            ],
+            "caption": "Born in WI, I can't help but be a cheesehead"
+        }
     ],
+
     "graphics": [
         {
             "id": 1,

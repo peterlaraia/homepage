@@ -1,0 +1,26 @@
+.carousel {
+    height: 250px;
+    width: 80%;
+    min-width: 400px;
+    max-width: 600px;
+
+    position: relative;
+}
+
+.carousel-trigger {
+    position: absolute;
+    display: inline-block;
+    width: 50%; 
+    height: 100%;
+    cursor: pointer;
+
+    &.carousel-trigger-right {
+        right: 0;
+        top: 0;
+    }
+
+    &.carousel-trigger-left {
+        left: 0;
+        top: 0;
+    }
+}

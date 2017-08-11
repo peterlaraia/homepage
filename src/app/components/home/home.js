@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { AboutMe } from './about/about-me';
+import { Carousel } from './carousel/carousel';
 import { Loading } from '../loading/loading';
 import { Scatter } from './scatter';
 import { ContentService } from '../../services/content.service';
@@ -18,7 +19,6 @@ export class Home extends React.Component {
     state = {
         summaries: [],
         hobbies: [],
-        graphics: [],
         loading: false
     }
 
@@ -34,24 +34,18 @@ export class Home extends React.Component {
     }
 
     render() {
-        const { summaries, hobbies, graphics, loading } = this.state;
+        const { summaries, hobbies, loading } = this.state;
+        console.log('hobbies', hobbies);
         return (
             <div style={{height: '100%'}}>
                 {
                     loading ?
                         <Loading /> :
-                        <div className='container vertical' style={{ height: '100%' }}>
+                        <div className='container vertical home'>
                             <h3 style={style}>Hi!</h3>
                             <AboutMe pieces={summaries} />
-                            <div className='scattered'>
-                                {
-                                    graphics.map(me => {
-                                        return (
-                                            <Scatter key={me.id} image={me.img} location={me.location} />
-                                        );
-                                    })
-                                }
-                            </div>
+                            <h5>Click below to learn more about me!</h5>
+                            <Carousel items={hobbies}  />
                         </div>
                 }
             </div>
