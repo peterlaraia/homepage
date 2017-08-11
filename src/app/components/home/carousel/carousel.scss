@@ -1,3 +1,5 @@
+$transition-time: 400ms;
+
 .carousel {
     height: 250px;
     width: 80%;
@@ -13,6 +15,7 @@
     width: 50%; 
     height: 100%;
     cursor: pointer;
+    z-index: 10;
 
     &.carousel-trigger-right {
         right: 0;
@@ -24,3 +27,51 @@
         top: 0;
     }
 }
+
+.carousel-animation-wrapper {
+    overflow: hidden;
+}
+
+.carousel-transition-left-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &.carousel-transition-left-enter-active {
+        opacity: 1;
+        transform: translateX(0);
+        transition: $transition-time;
+    }
+}
+
+/* .carousel-transition-left-leave {
+    opacity: 1;
+    transform: translateX(0);
+    
+    &.carousel-transition-left-leave-active {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: $transition-time;
+    }
+} */
+
+.carousel-transition-right-enter {
+    opacity: 0;
+    transform: translateX(100%);
+
+    &.carousel-transition-right-enter-active {
+        opacity: 1;
+        transform: translateX(0);
+        transition: $transition-time;
+    }
+}
+
+/* .carousel-transition-right-leave {
+    opacity: 1;
+    transform: translateX(0);
+
+    &.carousel-transition-right-leave-active {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: $transition-time;
+    }
+} */

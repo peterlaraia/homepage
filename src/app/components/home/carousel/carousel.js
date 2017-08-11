@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PropTypes from 'prop-types';
 
 import { CarouselWindow } from './carousel-window';
@@ -14,6 +15,8 @@ const defaultWindowStyle = {
     userSelect: 'none',
     height: '100%'
 }
+const TRANSITION_LEFT = 'carousel-transition-left';
+const TRANSITION_RIGHT = 'carousel-transition-right';
 
 export class Carousel extends React.Component {
 
@@ -21,7 +24,8 @@ export class Carousel extends React.Component {
         super(props);
         this.state = {
             idx: 0,
-            maxSize: props.items ? props.items.length : 0
+            maxSize: props.items ? props.items.length : 0,
+            transition: TRANSITION_RIGHT
         }
     }
 
@@ -31,28 +35,27 @@ export class Carousel extends React.Component {
     }
 
     onClickRight = () => {
-        console.log('heard click right');
         this.setState(this.goRight);
     }
 
     goLeft = (state) => {
-        console.log('going left');
         return {
             ...state,
-            idx: state.idx - 1 < 0 ? state.maxSize - 1 : state.idx - 1 
+            transition: TRANSITION_LEFT,
+            idx: state.idx - 1 < 0 ? state.maxSize - 1 : state.idx - 1
         };
     }
 
     goRight = (state) => {
-        console.log('going right');
         return {
             ...state,
+            transition: TRANSITION_RIGHT,
             idx: state.idx + 1 < state.maxSize ? state.idx + 1 : 0
         };
     }
 
     render() {
-        const { idx } = this.state;
+        const { idx, transition, maxSize } = this.state;
         const { items, wrapStyle, style } = this.props;
         const windowStyle = {
             ...defaultWindowStyle, ...style
@@ -61,9 +64,17 @@ export class Carousel extends React.Component {
             <div className='carousel' style={wrapStyle}>
                 <div className='carousel-trigger carousel-trigger-left' onClick={this.onClickLeft}></div>
                 {
-                    items.length && <CarouselWindow style={windowStyle}
-                        {...(items[idx]) } onClick={this.handleClick}
-                        carouselWindowRef={(div) => this.carouselWindowRef = div} />
+                    items.length &&
+                    <ReactCSSTransitionGroup
+                        transitionName={transition}
+                        transitionEnterTimeout={400}
+                        //transitionLeaveTimeout={400}
+                        transitionLeave={false}
+                        className='carousel-animation-wrapper'>
+                        <CarouselWindow style={windowStyle} key={idx}
+                            {...(items[idx]) } onClick={this.handleClick}
+                            carouselWindowRef={(div) => this.carouselWindowRef = div} />
+                    </ReactCSSTransitionGroup>
                 }
                 <div className='carousel-trigger carousel-trigger-right' onClick={this.onClickRight}></div>
             </div>
