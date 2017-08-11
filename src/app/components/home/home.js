@@ -7,6 +7,7 @@ import { Scatter } from './scatter';
 import { ContentService } from '../../services/content.service';
 
 import './home.scss';
+import './home.large.scss';
 
 const style = {
     textTransform: 'uppercase',

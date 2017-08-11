@@ -1,10 +1,9 @@
 $transition-enter-time: 400ms;
-$transition-leave-time: 200ms;
 
 .carousel {
     height: 250px;
     width: 80%;
-    min-width: 400px;
+    min-width: 200px;
     max-width: 600px;
 
     position: relative;

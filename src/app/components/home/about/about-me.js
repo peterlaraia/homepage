@@ -1,7 +1,8 @@
 import React from 'react';
 
 const style = {
-    padding: '12px'
+    paddingLeft: '24px',
+    paddingRight: '24px'
 };
 
 export function AboutMe(props) {
