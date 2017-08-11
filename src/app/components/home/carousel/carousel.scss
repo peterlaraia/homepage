@@ -15,7 +15,7 @@ $transition-enter-time: 400ms;
     width: 50%; 
     height: 100%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 1;
 
     &.carousel-trigger-right {
         right: 0;

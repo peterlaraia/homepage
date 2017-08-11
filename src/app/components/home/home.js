@@ -36,7 +36,6 @@ export class Home extends React.Component {
 
     render() {
         const { summaries, hobbies, loading } = this.state;
-        console.log('hobbies', hobbies);
         return (
             <div style={{height: '100%'}}>
                 {

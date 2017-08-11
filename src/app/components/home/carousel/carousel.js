@@ -30,7 +30,6 @@ export class Carousel extends React.Component {
     }
 
     onClickLeft = () => {
-        console.log('heard click left');
         this.setState(this.goLeft);
     }
 
