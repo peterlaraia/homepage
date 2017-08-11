@@ -1,62 +1,74 @@
-[
-    {
-        "id": 1,
-        "description": "Webdev",
-        "img": "angular.svg",
-        "location": {
-            "top": "30%",
-            "left": "40%"
+{
+    "summaries": [
+        "My name's Peter Laraia, I'm currently working at Thomson Reuters in the Findlaw organization as a Software Engineer, developing web applications and lead intake systems that help connect small to medium sized law firms with prospective clients.",
+        "I graduated from the University of Wisconsin - Madison in 2016, majoring in Computer Science. I love learning & playing with new technologies, and find myself particulary drawn to the rapidly evolving space of front-end development. I also enjoy tinkering with raspberry pis: I have a few laying around the house currently, one acting as a vpn to the home network, another as a home media center, and one that I haven't decided what to do with yet (ideas welcome ☺)"
+    ],
+    "hobbies": [
+        "I enjoy playing & watching soccer (S.C. Freiburg fan)",
+        "I play video games (recently Overwatch & Horizon: Zero Dawn)",
+        "My favorite tv shows are Game of Thrones, Daredevil, The Flash, Brooklyn Nine Nine, Friends (The list goes on & on)",
+        "I love skiing and have been a PSIA certified ski instructor for over 4 years"
+    ],
+    "graphics": [
+        {
+            "id": 1,
+            "description": "Webdev",
+            "img": "angular.svg",
+            "location": {
+                "top": "30%",
+                "left": "40%"
+            }
+        },
+        {
+            "id": 2,
+            "description": "Soccer",
+            "img": "soccer.png",
+            "location": {
+                "top": "15%",
+                "left": "7%"
+            }
+        },
+        {
+            "id": 3,
+            "description": "Overwatch",
+            "img": "overwatch.png",
+            "location": {
+                "top": "12%",
+                "left": "72%"
+            }
+        },
+        {
+            "id": 4,
+            "description": "Guild Wars 2",
+            "img": "gw2.png",
+            "location": {
+                "top": "38%",
+                "left": "70%"
+            }
+        },
+        {
+            "id": 5,
+            "img": "taiwan.svg",
+            "location": {
+                "top": "65%",
+                "left": "10%"
+            }
+        },
+        {
+            "id": 6,
+            "img": "usa.svg",
+            "location": {
+                "top": "65%",
+                "left": "40%"
+            }
+        },
+        {
+            "id": 7,
+            "img": "germany.svg",
+            "location": {
+                "top": "65%",
+                "left": "70%"
+            }
         }
-    },
-    {
-        "id": 2,
-        "description": "Soccer",
-        "img": "soccer.png",
-        "location": {
-            "top": "15%",
-            "left": "7%"
-        }
-    },
-    {
-        "id": 3,
-        "description": "Overwatch",
-        "img": "overwatch.png",
-        "location": {
-            "top": "12%",
-            "left": "72%"
-        }
-    },
-    {
-        "id": 4,
-        "description": "Guild Wars 2",
-        "img": "gw2.png",
-        "location": {
-            "top": "38%",
-            "left": "70%"
-        }
-    },
-    {
-        "id": 5,
-        "img": "taiwan.svg",
-        "location": {
-            "top": "65%",
-            "left": "10%"
-        }
-    },
-    {
-        "id": 6,
-        "img": "usa.svg",
-        "location": {
-            "top": "65%",
-            "left": "40%"
-        }
-    },
-    {
-        "id": 7,
-        "img": "germany.svg",
-        "location": {
-            "top": "65%",
-            "left": "70%"
-        }
-    }
-]
+    ]
+}

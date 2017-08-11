@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { AboutMe } from './about/about-me';
 import { Loading } from '../loading/loading';
 import { Scatter } from './scatter';
 import { ContentService } from '../../services/content.service';
@@ -15,7 +16,9 @@ const style = {
 export class Home extends React.Component {
 
     state = {
-        pieces: [],
+        summaries: [],
+        hobbies: [],
+        graphics: [],
         loading: false
     }
 
@@ -25,13 +28,13 @@ export class Home extends React.Component {
         }));
         ContentService.getMe().subscribe(me => {
             this.setState((state) => ({
-                ...state, pieces: me, loading: false
+                ...state, ...me, loading: false
             }));
         });
     }
 
     render() {
-        const { pieces, loading } = this.state;
+        const { summaries, hobbies, graphics, loading } = this.state;
         return (
             <div style={{height: '100%'}}>
                 {
@@ -39,9 +42,10 @@ export class Home extends React.Component {
                         <Loading /> :
                         <div className='container vertical' style={{ height: '100%' }}>
                             <h3 style={style}>Hi!</h3>
+                            <AboutMe pieces={summaries} />
                             <div className='scattered'>
                                 {
-                                    pieces.map(me => {
+                                    graphics.map(me => {
                                         return (
                                             <Scatter key={me.id} image={me.img} location={me.location} />
                                         );
