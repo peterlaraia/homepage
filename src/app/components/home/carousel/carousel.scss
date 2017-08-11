@@ -1,4 +1,5 @@
-$transition-time: 400ms;
+$transition-enter-time: 400ms;
+$transition-leave-time: 200ms;
 
 .carousel {
     height: 250px;
@@ -30,6 +31,10 @@ $transition-time: 400ms;
 
 .carousel-animation-wrapper {
     overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
 }
 
 .carousel-transition-left-enter {
@@ -39,20 +44,9 @@ $transition-time: 400ms;
     &.carousel-transition-left-enter-active {
         opacity: 1;
         transform: translateX(0);
-        transition: $transition-time;
+        transition: $transition-enter-time;
     }
 }
-
-/* .carousel-transition-left-leave {
-    opacity: 1;
-    transform: translateX(0);
-    
-    &.carousel-transition-left-leave-active {
-        opacity: 0;
-        transform: translateX(100%);
-        transition: $transition-time;
-    }
-} */
 
 .carousel-transition-right-enter {
     opacity: 0;
@@ -61,17 +55,6 @@ $transition-time: 400ms;
     &.carousel-transition-right-enter-active {
         opacity: 1;
         transform: translateX(0);
-        transition: $transition-time;
+        transition: $transition-enter-time;
     }
 }
-
-/* .carousel-transition-right-leave {
-    opacity: 1;
-    transform: translateX(0);
-
-    &.carousel-transition-right-leave-active {
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: $transition-time;
-    }
-} */

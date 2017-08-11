@@ -68,7 +68,6 @@ export class Carousel extends React.Component {
                     <ReactCSSTransitionGroup
                         transitionName={transition}
                         transitionEnterTimeout={400}
-                        //transitionLeaveTimeout={400}
                         transitionLeave={false}
                         className='carousel-animation-wrapper'>
                         <CarouselWindow style={windowStyle} key={idx}
